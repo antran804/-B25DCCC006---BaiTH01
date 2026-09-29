@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu bản thân</title>
+    <link rel="stylesheet" href="bocuc.css">
+    <script src="chucnang.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <a href="#trangchu" class="logo">An.</a>
+
+        <button id="menuToggle" class="menu-toggle">☰</button>
+
+        <nav id="navbar" class="navbar">
+            <a href="#trangchu">Trang chủ</a>
+            <a href="#gioithieu">Giới thiệu</a>
+            <a href="#kynang">Kỹ năng</a>
+            <a href="#duan">Dự án</a>
+            <a href="#lienhe">Liên hệ</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle">🌙</button>
+    </header>
+
+    <main>
+        <section id="trangchu" class="hero">
+            <div class="hero-content">
+                <h1>Trần Dương An</h1>
+                <h2>Sinh viên Công nghệ thông tin</h2>
+                <p>
+                    Xin chào! Mình là An, 19 tuổi, đang học tại
+                    Học viện Công nghệ Bưu chính Viễn thông.
+                    Mình yêu thích lập trình và muốn phát triển
+                    kỹ năng xây dựng website.
+                </p>
+                <a href="#duan" class="btn">Xem dự án</a>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://th.bing.com/th/id/OIP.EtGGX4WfpZsNMO1CQMKU5QHaJa?r=0&o=7rm=3&rs=1&pid=ImgDetMain&o=7&rm=3"
+                     alt="Ảnh đại diện">
+            </div>
+        </section>
+
+        <section id="gioithieu" class="section">
+            <h2 class="section-title">Giới thiệu bản thân</h2>
+
+            <div class="about-grid">
+                <div class="card">
+                    <h3>Thông tin cá nhân</h3>
+                    <p><strong>Họ và tên:</strong> Trần Dương An</p>
+                    <p><strong>Tuổi:</strong> 19 tuổi</p>
+                    <p><strong>Nghề nghiệp:</strong> Sinh viên</p>
+                    <p><strong>Trường:</strong> Học viện Công nghệ Bưu chính Viễn thông</p>
+                </div>
+
+                <div class="card">
+                    <h3>Sở thích</h3>
+                    <ul class="interest-list">
+                        <li>Chơi game</li>
+                        <li>Nghe nhạc</li>
+                        <li>Đọc sách</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="kynang" class="section">
+            <h2 class="section-title">Kỹ năng đang học</h2>
+
+            <div class="skills-grid">
+                <div class="card">
+                    <h3>HTML, CSS, JavaScript</h3>
+                    <p>Thiết kế website và dự án đặt lịch khám bệnh.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Java</h3>
+                    <p>Học lập trình hướng đối tượng.</p>
+                </div>
+
+                <div class="card">
+                    <h3>C++</h3>
+                    <p>Tìm hiểu lập trình game.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="duan" class="section">
+            <h2 class="section-title">Dự án của mình</h2>
+
+            <div class="project-tools">
+                <input type="text" id="projectSearch"
+                       placeholder="Tìm kiếm dự án...">
+
+                <select id="projectFilter">
+                    <option value="all">Tất cả dự án</option>
+                    <option value="web">Web</option>
+                    <option value="java">Java</option>
+                    <option value="cpp">C++</option>
+                </select>
+            </div>
+
+            <p id="projectCount" class="project-count"></p>
+
+            <div class="projects-grid">
+                <div class="card project-card" data-category="web">
+                    <h3>Website đặt lịch khám</h3>
+                    <p>Website hỗ trợ tìm kiếm bác sĩ và đặt lịch khám.</p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="java">
+                    <h3>Chương trình Java</h3>
+                    <p>Thực hành lập trình hướng đối tượng.</p>
+                    <div class="tags">
+                        <span>Java</span>
+                    </div>
+                </div>
+
+                <div class="card project-card" data-category="cpp">
+                    <h3>Dự án game</h3>
+                    <p>Tìm hiểu cách xây dựng trò chơi bằng C++.</p>
+                    <div class="tags">
+                        <span>C++</span>
+                    </div>
+                </div>
+            </div>
+
+            <p id="noProjects" class="empty-message" hidden>
+                Không tìm thấy dự án.
+            </p>
+        </section>
+
+        <section id="lienhe" class="section">
+            <h2 class="section-title">Liên hệ</h2>
+
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <label for="name">Họ và tên:</label>
+                    <input type="text" id="name"
+                           placeholder="Nhập họ tên">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email"
+                           placeholder="Nhập email">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Nội dung:</label>
+                    <textarea id="message" rows="5"
+                              maxlength="500"
+                              placeholder="Nhập nội dung"></textarea>
+                    <small id="charCount">0/500 ký tự</small>
+                </div>
+
+                <button type="submit" class="btn">Gửi liên hệ</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© <span id="currentYear"></span> Trần Dương An</p>
+        <a href="#trangchu">Lên đầu trang</a>
+    </footer>
+
+    <button id="backToTop" class="back-to-top">↑</button>
+
+</body>
+</html>

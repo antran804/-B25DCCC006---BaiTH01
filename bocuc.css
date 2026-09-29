@@ -1,0 +1,319 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f5fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+}
+
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+}
+
+.navbar a:hover {
+    color: blue;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.theme-toggle {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 50px 8%;
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: blue;
+}
+
+.hero h2 {
+    margin: 10px 0;
+}
+
+.hero-image img {
+    width: 200px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    background: blue;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: darkblue;
+}
+
+.section {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.about-grid,
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.about-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #ddd;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.interest-list {
+    padding-left: 20px;
+}
+
+.project-tools {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.project-tools input,
+.project-tools select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.tags span {
+    padding: 3px 8px;
+    background: #e0eaff;
+    color: blue;
+    border-radius: 5px;
+}
+
+.project-count,
+.empty-message {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.error {
+    color: red;
+}
+
+#charCount {
+    text-align: right;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 5%;
+    background: white;
+}
+
+.footer a {
+    color: blue;
+}
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 50%;
+    background: blue;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+.back-to-top.show {
+    display: block;
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: 0.5s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+body.dark {
+    background: #222;
+    color: white;
+}
+
+body.dark .header,
+body.dark .card,
+body.dark .contact-form,
+body.dark .footer {
+    background: #333;
+    color: white;
+}
+
+body.dark .navbar a {
+    color: white;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark select {
+    background: #444;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .navbar {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .about-grid,
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-tools {
+        flex-direction: column;
+    }
+
+    .project-tools input,
+    .project-tools select {
+        width: 100%;
+    }
+
+    .footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
